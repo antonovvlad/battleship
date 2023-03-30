@@ -8,6 +8,13 @@
           "corejs": "3.17.3"
         }
       ]
+    ], 
+
+    "plugins": [
+      ["@babel/plugin-transform-modules-commonjs", {
+        "strict": true,
+        "noInterop": true
+      }]
     ]
   }
 

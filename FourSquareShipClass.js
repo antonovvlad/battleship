@@ -1,7 +1,7 @@
-import board from './constants';
-import { getRandom } from './helper';
+import BOARD from './constants';
+import getRandom from './helper';
 
-class FourSquareShip {
+export class FourSquareShip {
   constructor() {
     this.x = Math.floor(Math.random() * 6);
     this.y = Math.floor(Math.random() * 6);
@@ -16,10 +16,10 @@ class FourSquareShip {
       this.thirdy = this.y;
       this.fourthx = this.thirdx + 1;
       this.fourthy = this.y;
-      board[this.x][this.y] = 'r';
-      board[this.secondx][this.secondy] = 'r';
-      board[this.thirdx][this.thirdy] = 'r';
-      board[this.fourthx][this.fourthy] = 'r';
+      BOARD[this.x][this.y] = 'r';
+      BOARD[this.secondx][this.secondy] = 'r';
+      BOARD[this.thirdx][this.thirdy] = 'r';
+      BOARD[this.fourthx][this.fourthy] = 'r';
     } else if (position === 1) {
       this.secondx = this.x;
       this.secondy = this.y + 1;
@@ -27,12 +27,10 @@ class FourSquareShip {
       this.thirdy = this.secondy + 1;
       this.fourthx = this.x;
       this.fourthy = this.thirdy + 1;
-      board[this.x][this.y] = 'r';
-      board[this.secondx][this.secondy] = 'r';
-      board[this.thirdx][this.thirdy] = 'r';
-      board[this.fourthx][this.fourthy] = 'r';
+      BOARD[this.x][this.y] = 'r';
+      BOARD[this.secondx][this.secondy] = 'r';
+      BOARD[this.thirdx][this.thirdy] = 'r';
+      BOARD[this.fourthx][this.fourthy] = 'r';
     }
   }
 }
-
-export default FourSquareShip;

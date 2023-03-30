@@ -1,14 +1,14 @@
-import board from './constants';
+import BOARD from './constants';
 import { getRandom, checkPlaceForThreeSquareShip } from './helper';
 
-class ThreeSquareShip {
+export class ThreeSquareShip {
   constructor() {
     this.x = Math.floor(Math.random() * 7);
     this.y = Math.floor(Math.random() * 7);
   }
 
   getCreateThreeSquareShip() {
-    const result = checkPlaceForThreeSquareShip(board, this.x, this.y, this.secondx, this.secondy, this.thirdx, this.thirdy);
+    const result = checkPlaceForThreeSquareShip(BOARD, this.x, this.y, this.secondx, this.secondy, this.thirdx, this.thirdy);
     if (!result) {
       this.x = Math.floor(Math.random() * 7);
       this.y = Math.floor(Math.random() * 7);
@@ -18,17 +18,17 @@ class ThreeSquareShip {
         this.secondy = this.y;
         this.thirdx = this.secondx + 1;
         this.thirdy = this.y;
-        board[this.x][this.y] = 'e';
-        board[this.secondx][this.secondy] = 'e';
-        board[this.thirdx][this.thirdy] = 'e';
+        BOARD[this.x][this.y] = 'e';
+        BOARD[this.secondx][this.secondy] = 'e';
+        BOARD[this.thirdx][this.thirdy] = 'e';
       } else if (position === 1) {
         this.secondx = this.x;
         this.secondy = this.y + 1;
         this.thirdx = this.x;
         this.thirdy = this.secondy + 1;
-        board[this.x][this.y] = 'e';
-        board[this.secondx][this.secondy] = 'e';
-        board[this.thirdx][this.thirdy] = 'e';
+        BOARD[this.x][this.y] = 'e';
+        BOARD[this.secondx][this.secondy] = 'e';
+        BOARD[this.thirdx][this.thirdy] = 'e';
       }
     } else {
       const position = getRandom(2);
@@ -37,20 +37,18 @@ class ThreeSquareShip {
         this.secondy = this.y;
         this.thirdx = this.secondx + 1;
         this.thirdy = this.y;
-        board[this.x][this.y] = 'e';
-        board[this.secondx][this.secondy] = 'e';
-        board[this.thirdx][this.thirdy] = 'e';
+        BOARD[this.x][this.y] = 'e';
+        BOARD[this.secondx][this.secondy] = 'e';
+        BOARD[this.thirdx][this.thirdy] = 'e';
       } else if (position === 1) {
         this.secondx = this.x;
         this.secondy = this.y + 1;
         this.thirdx = this.x;
         this.thirdy = this.secondy + 1;
-        board[this.x][this.y] = 'e';
-        board[this.secondx][this.secondy] = 'e';
-        board[this.thirdx][this.thirdy] = 'e';
+        BOARD[this.x][this.y] = 'e';
+        BOARD[this.secondx][this.secondy] = 'e';
+        BOARD[this.thirdx][this.thirdy] = 'e';
       }
     }
   }
 }
-
-export default ThreeSquareShip;

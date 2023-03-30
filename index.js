@@ -2,21 +2,12 @@ import FourSquareShip from './FourSquareShipClass';
 import ThreeSquareShip from './ThreeSquareShipClass';
 import TwoSquareShip from './TwoSquareShipClass';
 import OneSquareShip from './OneSquareShipClass';
-import board from './constants';
-
-const createBoard = () => {
-  for (let i = 0; i < 10; i += 1) {
-    const row = [];
-    for (let j = 0; j < 10; j += 1) {
-      row.push(0);
-    }
-    board.push(row);
-  }
-};
+import BOARD from './constants';
+import createBoard from './helper';
 
 createBoard();
 
-console.log(board);
+console.log(BOARD);
 
 const fourSquareShip = new FourSquareShip();
 fourSquareShip.getCreateFourSquareShip();
