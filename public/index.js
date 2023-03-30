@@ -1,9 +1,9 @@
-import FourSquareShip from './FourSquareShipClass';
-import ThreeSquareShip from './ThreeSquareShipClass';
-import TwoSquareShip from './TwoSquareShipClass';
-import OneSquareShip from './OneSquareShipClass';
-import BOARD from './constants';
-import createBoard from './helper';
+import { FourSquareShip } from './src/FourSquareShipClass.js';
+import { ThreeSquareShip } from './src/ThreeSquareShipClass.js';
+import { TwoSquareShip } from './src/TwoSquareShipClass.js';
+import { OneSquareShip } from './src/OneSquareShipClass.js';
+import { BOARD } from './src/constants.js';
+import { createBoard } from './src/helper.js';
 
 createBoard();
 

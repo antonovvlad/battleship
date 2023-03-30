@@ -1,5 +1,5 @@
-import BOARD from './constants';
-import { getRandom, checkPlaceForThreeSquareShip } from './helper';
+import { BOARD } from './constants.js';
+import { getRandom, checkPlaceForThreeSquareShip } from './helper.js';
 
 export class ThreeSquareShip {
   constructor() {

@@ -1,5 +1,5 @@
-import BOARD from './constants';
-import checkPlaceForOneSquareShip from './helper';
+import { BOARD } from './constants.js';
+import { checkPlaceForOneSquareShip } from './helper.js';
 
 export class OneSquareShip {
   constructor() {

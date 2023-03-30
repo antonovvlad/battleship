@@ -1,5 +1,5 @@
-import BOARD from './constants';
-import getRandom from './helper';
+import { BOARD } from './constants.js';
+import { getRandom } from './helper.js';
 
 export class FourSquareShip {
   constructor() {

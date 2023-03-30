@@ -1,4 +1,4 @@
-import BOARD from './constants';
+import { BOARD } from './constants.js';
 
 const getRandom = (max) => (Math.floor(Math.random() * max) === 0 ? 0 : 1);
 
